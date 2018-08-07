@@ -15,7 +15,33 @@ using namespace std;
 //		<< "4. Exit\n\n"
 //		<< "Enter Your Choice:";
 //	cin >> choice;
-//	cout << "You picked:" << choice << endl;
+//
+//	if ((choice < 1) || (choice > 4))
+//	{
+//		cout << "Enter a number 1-4\n";
+//	}
+//
+//	switch (choice)
+//	{
+//	case 1:
+//		cout << "You picked:" << choice << endl;
+//		break;
+//
+//	case 2:
+//		cout << "You picked:" << choice << endl;
+//		break;
+//
+//	case 3:
+//		cout << "You picked:" << choice << endl;
+//		break;
+//
+//	case 4:
+//		cout << "You picked:" << choice << endl;
+//		break;
+//
+//	default:
+//		break;
+//	}
 //	// system pause to see console window
 //	system("pause");
 //	return 0;

@@ -327,6 +327,8 @@ namespace WindowFormsTestApp {
             
             private global::System.Data.DataColumn columnF24;
             
+            private global::System.Data.DataColumn columnDelete;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public noclmasterDataTable() {
@@ -554,6 +556,14 @@ namespace WindowFormsTestApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DeleteColumn {
+                get {
+                    return this.columnDelete;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -613,7 +623,8 @@ namespace WindowFormsTestApp {
                         string REPRESENTED_NBHD, 
                         string COUNCIL_DIST, 
                         string SERVICE_AREA, 
-                        string F24) {
+                        string F24, 
+                        string Delete) {
                 noclmasterRow rownoclmasterRow = ((noclmasterRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NOCL_ID,
@@ -639,10 +650,18 @@ namespace WindowFormsTestApp {
                         REPRESENTED_NBHD,
                         COUNCIL_DIST,
                         SERVICE_AREA,
-                        F24};
+                        F24,
+                        Delete};
                 rownoclmasterRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rownoclmasterRow);
                 return rownoclmasterRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public noclmasterRow FindByNOCL_ID(short NOCL_ID) {
+                return ((noclmasterRow)(this.Rows.Find(new object[] {
+                            NOCL_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -686,6 +705,7 @@ namespace WindowFormsTestApp {
                 this.columnCOUNCIL_DIST = base.Columns["COUNCIL_DIST"];
                 this.columnSERVICE_AREA = base.Columns["SERVICE_AREA"];
                 this.columnF24 = base.Columns["F24"];
+                this.columnDelete = base.Columns["Delete"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -739,6 +759,12 @@ namespace WindowFormsTestApp {
                 base.Columns.Add(this.columnSERVICE_AREA);
                 this.columnF24 = new global::System.Data.DataColumn("F24", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnF24);
+                this.columnDelete = new global::System.Data.DataColumn("Delete", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDelete);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNOCL_ID}, true));
+                this.columnNOCL_ID.AllowDBNull = false;
+                this.columnNOCL_ID.Unique = true;
                 this.columnNOTES.MaxLength = 255;
                 this.columnPRIMARY_CONTACT.MaxLength = 255;
                 this.columnORGANIZATION_NAME.MaxLength = 255;
@@ -905,12 +931,7 @@ namespace WindowFormsTestApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public short NOCL_ID {
                 get {
-                    try {
-                        return ((short)(this[this.tablenoclmaster.NOCL_IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NOCL_ID\' in table \'noclmaster\' is DBNull.", e);
-                    }
+                    return ((short)(this[this.tablenoclmaster.NOCL_IDColumn]));
                 }
                 set {
                     this[this.tablenoclmaster.NOCL_IDColumn] = value;
@@ -1287,14 +1308,18 @@ namespace WindowFormsTestApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNOCL_IDNull() {
-                return this.IsNull(this.tablenoclmaster.NOCL_IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNOCL_IDNull() {
-                this[this.tablenoclmaster.NOCL_IDColumn] = global::System.Convert.DBNull;
+            public string Delete {
+                get {
+                    try {
+                        return ((string)(this[this.tablenoclmaster.DeleteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Delete\' in table \'noclmaster\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablenoclmaster.DeleteColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1571,6 +1596,18 @@ namespace WindowFormsTestApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetF24Null() {
                 this[this.tablenoclmaster.F24Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDeleteNull() {
+                return this.IsNull(this.tablenoclmaster.DeleteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDeleteNull() {
+                this[this.tablenoclmaster.DeleteColumn] = global::System.Convert.DBNull;
             }
         }
         

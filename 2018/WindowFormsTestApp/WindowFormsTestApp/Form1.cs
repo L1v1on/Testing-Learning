@@ -31,5 +31,13 @@ namespace WindowFormsTestApp
             this.noclmasterTableAdapter.Fill(this.nocl_tempDataSet.noclmaster);
 
         }
+
+        private void noclmasterBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.noclmasterBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.nocl_tempDataSet);
+
+        }
     }
 }

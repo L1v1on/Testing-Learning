@@ -244,10 +244,15 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Delete" msprop:Generator_ColumnVarNameInTable="columnDelete" msprop:Generator_ColumnPropNameInRow="Delete" msprop:Generator_ColumnPropNameInTable="DeleteColumn" msprop:Generator_UserColumnName="Delete" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:noclmaster" />
+      <xs:field xpath="mstns:NOCL_ID" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

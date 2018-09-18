@@ -14,7 +14,7 @@ int main()
 	return 0;
 }
 
-void numChange(int &numP)
+void numChange(int &numR)
 {
 	cout << "numChange() will now change main() local num\n"; 
 	numP = 23;

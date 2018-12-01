@@ -6,57 +6,63 @@ using namespace std;
 int main()
 {
 	int choice;
-
-	cout << "Serendipity Booksellers\n"
-		<< "Reports\n\n"
-		<< "1. Inventory Listing\n"
-		<< "2. Inventory Wholesale Value\n"
-		<< "3. Inventory Retail Value\n"
-		<< "4. Listing by Quantity\n"
-		<< "5. Listing by Cost\n"
-		<< "6. Listing by Age\n"
-		<< "7. Return to the Main Menu\n\n"
-		<< "Enter Your Choice:";
-	cin >> choice;
-
-	if ((choice < 1) || (choice > 7))
+	
+	do
 	{
-		cout << "Enter a number 1-7\n";
-	}
+		cout << "Serendipity Booksellers\n"
+			<< "Reports\n\n"
+			<< "1. Inventory Listing\n"
+			<< "2. Inventory Wholesale Value\n"
+			<< "3. Inventory Retail Value\n"
+			<< "4. Listing by Quantity\n"
+			<< "5. Listing by Cost\n"
+			<< "6. Listing by Age\n"
+			<< "7. Return to the Main Menu\n\n"
+			<< "Enter Your Choice:";
+		cin >> choice;
 
-	switch (choice)
-	{
-	case 1:
-		cout << "You picked:" << choice << endl;
-		break;
+		while ((choice < 1) || (choice > 7))
+		{
+			cout << "Enter a number 1-7\n";
+			cin >> choice;
+			cout << endl;
+		}
 
-	case 2:
-		cout << "You picked:" << choice << endl;
-		break;
+		switch (choice)
+		{
+		case 1:
+			cout << "You picked:" << choice << endl;
+			break;
 
-	case 3:
-		cout << "You picked:" << choice << endl;
-		break;
+		case 2:
+			cout << "You picked:" << choice << endl;
+			break;
 
-	case 4:
-		cout << "You picked:" << choice << endl;
-		break;
+		case 3:
+			cout << "You picked:" << choice << endl;
+			break;
 
-	case 5:
-		cout << "You picked:" << choice << endl;
-		break;
+		case 4:
+			cout << "You picked:" << choice << endl;
+			break;
 
-	case 6:
-		cout << "You picked:" << choice << endl;
-		break;
+		case 5:
+			cout << "You picked:" << choice << endl;
+			break;
 
-	case 7:
-		cout << "You picked:" << choice << endl;
-		break;
+		case 6:
+			cout << "You picked:" << choice << endl;
+			break;
 
-	default:
-		break;
-	}
+		case 7:
+			cout << "You picked:" << choice << endl;
+			break;
+
+		default:
+			break;
+		}
+	}while(choice != 7);
+	
 	// system pause to see console window
 	system("pause");
 	return 0;

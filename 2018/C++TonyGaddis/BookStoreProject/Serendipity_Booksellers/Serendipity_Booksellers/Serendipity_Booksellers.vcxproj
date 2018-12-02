@@ -121,6 +121,12 @@
     <ClCompile Include="mainmenu.cpp" />
     <ClCompile Include="reports.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bookinfo.h" />
+    <ClInclude Include="cashier.h" />
+    <ClInclude Include="invmenu.h" />
+    <ClInclude Include="reports.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

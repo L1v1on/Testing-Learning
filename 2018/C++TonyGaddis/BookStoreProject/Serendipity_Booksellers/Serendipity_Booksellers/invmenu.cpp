@@ -1,9 +1,10 @@
 // inventory menu of book seller program
 #include <iostream>
+#include "invmenu.h"
 
 using namespace std;
 
-int main()
+int invMenu()
 {
 	int choice;
 	
@@ -29,19 +30,19 @@ int main()
 		switch (choice)
 		{
 		case 1:
-			cout << "You picked:" << choice << endl;
+			lookUpBook();
 			break;
 
 		case 2:
-			cout << "You picked:" << choice << endl;
+			addBook();
 			break;
 
 		case 3:
-			cout << "You picked:" << choice << endl;
+			editBook();
 			break;
 
 		case 4:
-			cout << "You picked:" << choice << endl;
+			deleteBook();
 			break;
 
 		case 5:
@@ -56,4 +57,24 @@ int main()
 	// system pause to see console window
 	system("pause");
 	return 0;
+}
+
+void lookUpBook()
+{
+	cout << "You selected Look Up Book.\n";
+}
+
+void addBook()
+{
+	cout << "You selected Add Book.\n";
+}
+
+void editBook()
+{
+	cout << "You selected Edit Book.\n";
+}
+
+void deleteBook()
+{
+	cout << "You selected Delete Book.\n";
 }

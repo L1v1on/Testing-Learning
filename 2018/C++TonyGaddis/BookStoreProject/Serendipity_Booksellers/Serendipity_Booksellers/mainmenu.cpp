@@ -1,5 +1,8 @@
 // main menu of book seller program
 #include <iostream>
+#include "cashier.h"
+#include "invmenu.h"
+#include "reports.h"
 
 using namespace std;
 
@@ -27,15 +30,15 @@ int main()
 		switch (choice)
 		{
 		case 1:
-			cout << "You picked:" << choice << endl;
+			cashier();
 			break;
 
 		case 2:
-			cout << "You picked:" << choice << endl;
+			invMenu();
 			break;
 
 		case 3:
-			cout << "You picked:" << choice << endl;
+			reports();
 			break;
 
 		case 4:

@@ -1,9 +1,10 @@
 // reports menu of book seller program
 #include <iostream>
+#include "reports.h"
 
 using namespace std;
 
-int main()
+int reports()
 {
 	int choice;
 	
@@ -31,27 +32,27 @@ int main()
 		switch (choice)
 		{
 		case 1:
-			cout << "You picked:" << choice << endl;
+			repListing();
 			break;
 
 		case 2:
-			cout << "You picked:" << choice << endl;
+			repWholesale();
 			break;
 
 		case 3:
-			cout << "You picked:" << choice << endl;
+			repRetail();
 			break;
 
 		case 4:
-			cout << "You picked:" << choice << endl;
+			repQty();
 			break;
 
 		case 5:
-			cout << "You picked:" << choice << endl;
+			repCost();
 			break;
 
 		case 6:
-			cout << "You picked:" << choice << endl;
+			repAge();
 			break;
 
 		case 7:
@@ -66,4 +67,34 @@ int main()
 	// system pause to see console window
 	system("pause");
 	return 0;
+}
+
+void repListing()
+{
+	cout << "You selected Inventory Listing.\n";
+}
+
+void repWholesale()
+{
+	cout << "You selected Inventory Wholesale Value.\n";
+}
+
+void repRetail()
+{
+	cout << "You selected Inventory Retail Value.\n";
+}
+
+void repQty()
+{
+	cout << "You selected Listing By Quantity.\n";
+}
+
+void repCost()
+{
+	cout << "You selected Listing By Cost.\n";
+}
+
+void repAge()
+{
+	cout << "You selected Listing By Age.\n";
 }

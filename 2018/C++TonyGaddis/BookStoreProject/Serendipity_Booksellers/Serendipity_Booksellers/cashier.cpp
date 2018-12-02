@@ -1,10 +1,11 @@
 // cashier menu of book seller program
 #include <iostream>
 #include <iomanip>
+#include "cashier.h"
 
 using namespace std;
 
-int main()
+int cashier()
 {
 	char date[9];
 	int qty;

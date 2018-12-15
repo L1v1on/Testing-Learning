@@ -24,7 +24,7 @@ int main()
 		 << "5. $" << item5 << endl
 		 << "Subtotal: $" << subTotal << endl
 		 << "Sales Tax: " << salesTax << "%" << endl
-		 << "Total: $" << total; 
+		 << "Total: $" << total << endl; 
 	
 	// system pause to view console 
 	system("pause");
